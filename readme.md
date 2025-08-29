@@ -10,6 +10,7 @@ It returns only the element whose ID matches.
 ```html
 <div id="box"></div>
 ```
+
 ```javascript
 document.getElementById("box");
 ```
@@ -25,6 +26,7 @@ It returns an **HTMLCollection** of all matching elements.
 <div class="item"></div>
 <div class="item"></div>
 ```
+
 ```javascript
 document.getElementsByClassName("item");
 ```
@@ -40,6 +42,7 @@ It returns the **first matching element**.
 <div class="card"></div>
 <div class="card"></div>
 ```
+
 ```javascript
 document.querySelector(".card");
 ```
@@ -54,15 +57,14 @@ It returns a NodeList of **all elements** that match the given selector.
 <div class="card"></div>
 <div class="card"></div>
 ```
+
 ```javascript
 document.querySelectorAll(".card");
 ```
 
-
-
 **Answer to question no : 02**
 
-*To create a new element and insert it into the DOM, you need to follow these steps:*
+_To create a new element and insert it into the DOM, you need to follow these steps:_
 
 1. **Create a new element.**
 
@@ -105,8 +107,6 @@ newElement.setAttribute("class", "highlight");
 document.body.appendChild(newElement);
 ```
 
-
-
 **Answer to question no : 03**
 
 When an event occurs on an element on a website, the event does not stay confined to that element alone. It moves from the innermost element → to the outer element → then to the outer parent elements, traveling upward step by step. This process of the event traveling upwards through the parent elements is called **Event Bubbling**.
@@ -114,8 +114,6 @@ When an event occurs on an element on a website, the event does not stay confine
 When an event occurs on an element, first that element receives the event. Then the event moves to the parent element of that element. After that, it goes to the parent’s parent, and continues this way all the way up to the document.
 **For example,** suppose there is a `<button>` inside a `<div>`, and the `<div>` is inside the `<body>`. When you click the button, first the button’s event handler will run, then the event handler of the div will run, and then the event handler of the body will run.
 In other words, it works like a tree.
-
-
 
 **Answer to question no : 04**
 
@@ -134,8 +132,6 @@ Let’s say I create a new button later using JavaScript. If I use direct event 
 **4. Code becomes simple and clean, and easier to maintain.**
 If the number of buttons increases or decreases later, I don’t need to go into each element and modify the event listeners. With just one listener on the parent, everything can be controlled.
 
-
-
 **Answer to question no : 05**
 
 **`preventDefault()`**
@@ -144,8 +140,9 @@ This method is used to stop an element’s default behavior.
 
 **Example:**
 Suppose I have an `<a>` tag that opens a link. If I use `preventDefault()`, the link will no longer open.
+
 ```javascript
-document.querySelector("a").addEventListener("click", function(event) {
+document.querySelector("a").addEventListener("click", function (event) {
   event.preventDefault();
 });
 ```
@@ -156,9 +153,12 @@ This method keeps the event confined only to the element where it occurred and d
 In other words, it stops Event Bubbling.
 
 **Example:**
+
 ```javascript
-const child = document.getElementById('child');
-child.addEventListener("click", function(event) {
+const child = document.getElementById("child");
+child.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 ```
+
+<!-----------------------Implementation by: Md. Abdul Kaium------------------------->
